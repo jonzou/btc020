@@ -276,7 +276,7 @@ graph TD
     V --> W[AddToMemoryPool];
     U -- ptxOld is not set --> W;
     W --> X{"ptxOld is set?"};
-    X -- Yes --> Y[EraseFromWallet(ptxOld)];
+    X -- Yes --> Y["EraseFromWallet(ptxOld)"];
     X -- No --> Z[Log: Accepted];
     Y --> Z;
     Z --> AA[Return True];
