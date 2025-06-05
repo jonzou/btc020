@@ -255,7 +255,7 @@ graph TD
     D -- No --> E[Error: CheckTransaction failed];
     D -- Yes --> F{nLockTime > INT_MAX?};
     F -- Yes --> G[Error: nLockTime beyond 2038];
-    F -- No --> H{Already have tx? (mempool/db)};
+    F -- No --> H{"Already have tx? (mempool/db)"};
     H -- Yes --> I[Return False (already have)];
     H -- No --> J{Conflict with mempool tx?};
     J -- Yes --> K{Can replace existing (IsNewerThan)?};
