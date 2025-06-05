@@ -259,7 +259,7 @@ graph TD
     H -- Yes --> I["Return False (already have)"];
     H -- No --> J{"Conflict with mempool tx?"};
     J -- Yes --> K{"Can replace existing (IsNewerThan)?"};
-    K -- No --> L[Return False (conflict)];
+    K -- No --> L["Return False (conflict)"];
     K -- Yes --> M[ptxOld = existing_tx];
     J -- No --> N[No conflict or replacement];
     M --> N;
